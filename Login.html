@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RecycleRewards - Login</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.1/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+
+.video-background {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height:100%;
+            overflow: hidden;
+            z-index: -1;
+        }
+        video {
+            min-width: 100%;
+            min-height: 100%;
+            width: auto;
+            height: auto;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            object-fit: cover;
+        }
+        body {
+            background-color: #e8f5e9;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+        }
+
+        .login-container {
+            background-color: white;
+            opacity: 75%;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(53, 33, 207, 0.1);
+            padding: 30px;
+            width: 100%;
+            max-width: 400px;
+          
+        }
+        
+        .logo-container {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .logo-container img {
+            width: 100px;
+            height: 100px;
+        }
+        .btn-green {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+        }
+        .btn-green:hover {
+            background-color: #45a049;
+            color: white;
+        }
+        .footer-links {
+           display: flex;
+           flex-direction: column;
+           gap:5px;
+            margin-top: 15px;
+            text-align: center;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="video-background">
+        <video autoplay muted loop>
+            <source src="./video2.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+    <div class="container">
+        
+        <div class="login-container">
+            <div class="logo-container">
+                <img src="./images/image2.png" alt="RecycleRewards Logo" class="mb-3">
+                <h2 style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;"><b> Eco Recycle</b></h2>
+            </div>
+            
+            <form id="loginForm"  onsubmit="redirectToPage(); return false;">
+                <div class="mb-3">
+                    <label for="email" class="form-label">Email address</label>
+                    <input type="email" class="form-control" id="email" required>
+                </div>
+                <div class="mb-3">
+                    <label for="password" class="form-label">Password</label>
+                    <input type="password" class="form-control" id="password" required>
+                </div>
+                <button type="submit" class="btn btn-green w-100"><b>Login</b></button>
+                
+                <div class="footer-links">
+                    <a href="mainpage.html" class="text-muted" >Already Registered?</a>  
+                    <a href="#" class="text-muted">Forgot Password?</a>
+                    
+                </div>
+
+            </form>
+            <script>
+                function redirectToPage() {
+                    window.location.href = "mainpage.html"; 
+                }
+            </script>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.1/js/bootstrap.bundle.min.js"></script>
+    <script>
+        document.getElementById('loginForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const email = document.getElementById('email').value;
+            const password = document.getElementById('password').value;
+            
+            // Here you would typically add authentication logic
+            
+        });
+    </script>
+</body>
+</html>
